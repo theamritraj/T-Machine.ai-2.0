@@ -1,16 +1,15 @@
-
+import Navbar from "./components/Navbar";
+// import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="h-screen flex flex-col">
-      
+      <Navbar />
       <div className="flex flex-grow">
-        
-        
+        {/* <Sidebar /> */}
       </div>
-      <footer className="text-center text-sm py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-        Terms and Condition | Privacy Policy | About Us | Refund Policy
-      </footer>
+      <Footer/>
     </div>
   );
 }

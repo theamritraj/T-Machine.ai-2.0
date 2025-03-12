@@ -1,25 +1,55 @@
-import { Power, Moon, Home, FileText, BarChart2, BookOpen, User } from "lucide-react";
+import "../styles/navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-white shadow-md">
-      <div className="flex items-center gap-2">
+    <nav className="navbar">
+      {/* Logo */}
+      <div className="logo-container">
         <img
-          src="https://s3-alpha-sig.figma.com/img/9bf1/e463/abd1efa99cc3dccd730059e05abc478e"
+          src="./src/assets/navBar/logo.png"
           alt="logo"
-          className="h-8"
+          className="navbar-logo"
         />
-        <span className="text-xl font-semibold text-[#5A5AEB]">tmachine.ai</span>
       </div>
-      <div className="flex gap-4">
-        <Moon />
-        <Home />
-        <FileText />
-        <BarChart2 />
-        <User />
-        <Power />
-      </div>
+
+      {/* Frame 1312 */}
+      <img
+        src="./src/assets/navBar/Frame 1312.png"
+        alt="Frame 1312"
+        className="frame-1312"
+      />
+
+      {/* Vector */}
+      <img
+        src="./src/assets/navBar/vector.png"
+        alt="vector"
+        className="vector"
+      />
+
+      {/* Bar*/}
+      <img
+        src="./src/assets/navBar/bar.png"
+        alt="bar"
+        className="bar"
+      />
+
+      {/* Person*/}
+      <img
+        src="./src/assets/navBar/person.png"
+        alt="person"
+        className="person"
+      />
+
+       {/* Person*/}
+       <img
+        src="./src/assets/navBar/lay"
+        alt="person"
+        className="person"
+      />
+
+      
     </nav>
   );
-}
+};
+
 export default Navbar;

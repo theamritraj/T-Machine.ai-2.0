@@ -1,0 +1,47 @@
+
+.navbar {
+  width: max-width;
+  height: 67px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #b1aeae;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Logo styling */
+.navbar-logo {
+  width: 187.9px;
+  height: 54.98px;
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+
+/* Icon container styling */
+.navbar-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Frame 1312 styling */
+.frame-1312 {
+  width: 25.63px;
+  height: 30px;
+  position: absolute;
+  top: 22px;
+  left: 1134px;
+}
+
+/* Vector styling */
+.vector {
+  width: 20.45px;
+  height: 23.86px;
+  position: absolute;
+  top: 22px;
+  left: 1195px;
+  color: #343434;
+}
