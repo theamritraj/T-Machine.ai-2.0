@@ -1,16 +1,21 @@
 import Navbar from "./components/Navbar";
-// import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
+import CourseSection from "./components/CourseSection";
+import Sidebar from "./components/Sidebar";
+import "./styles/app.css";
 
 function App() {
   return (
-    <div className="h-screen flex flex-col">
+    <>
       <Navbar />
-      <div className="flex flex-grow">
-        {/* <Sidebar /> */}
-      </div>
-      <Footer/>
-    </div>
+      <main>
+        <Sidebar />
+        <div className="course-container">
+          <CourseSection />
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
 

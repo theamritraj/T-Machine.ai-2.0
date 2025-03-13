@@ -6,47 +6,54 @@ const Navbar = () => {
       {/* Logo */}
       <div className="logo-container">
         <img
-          src="./src/assets/navBar/logo.png"
+          src="./src/assets/navBar/logo.svg"
           alt="logo"
           className="navbar-logo"
         />
       </div>
 
-      {/* Frame 1312 */}
-      <img
-        src="./src/assets/navBar/Frame 1312.png"
-        alt="Frame 1312"
-        className="frame-1312"
+     <div className="navbar-icons">
+       {/* Frame Moon */}
+       <img
+        src="./src/assets/navBar/moon.png"
+        alt="Moon"
+        className="moon"
       />
-
-      {/* Vector */}
+      {/* Frame Home */}
+      <img
+        src="./src/assets/navBar/home.png"
+        alt="Home"
+        className="moon"
+      />
+      {/* Frame File */}
       <img
         src="./src/assets/navBar/vector.png"
-        alt="vector"
-        className="vector"
+        alt="File"
+        className="moon"
       />
-
-      {/* Bar*/}
+      {/* Frame Bar */}
       <img
         src="./src/assets/navBar/bar.png"
-        alt="bar"
-        className="bar"
+        alt=""
+        className="moon"
       />
-
-      {/* Person*/}
+      {/* Frame person */}
       <img
         src="./src/assets/navBar/person.png"
         alt="person"
-        className="person"
+        className="moon"
       />
-
-       {/* Person*/}
-       <img
-        src="./src/assets/navBar/lay"
-        alt="person"
-        className="person"
+      {/* Frame Moon */}
+      <img
+        src="./src/assets/navBar/logout.svg"
+        alt="logout"
+        className="moon"
       />
+      
 
+      
+     
+     </div>
       
     </nav>
   );
