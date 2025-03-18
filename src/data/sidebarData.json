@@ -1,0 +1,6 @@
+[
+  { "icon": "📊", "label": "Progress" },
+  { "icon": "📈", "label": "Statistic" },
+  { "icon": "📝", "label": "Notes" },
+  { "icon": "✏️", "label": "Highlights" }
+]

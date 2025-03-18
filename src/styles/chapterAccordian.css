@@ -1,0 +1,63 @@
+.course-section {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 15px;
+  background: #B3C8FF;
+  height: 80vh;
+ 
+}
+.chapter{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  width: 180px;
+  height: 38px;
+  border : 1px solid #4d4d4d;
+  background: #CEDCFE;
+  border: none;
+  box-shadow: 0px 0px 10px 0px rgba(135, 135, 135, 0.4);
+}
+#cptn{
+  font-size: 20px;
+  font-weight: 500;
+  color: #1274FF;
+  padding: 10px;
+  margin: 5px;
+}
+
+.chapter-content{
+  height: 38px;
+  width: 1142px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  border : 1px solid #4d4d4d;
+  background: #CEDCFE;
+  border: none;
+  box-shadow: 0px 0px 10px 0px rgba(135, 135, 135, 0.4);
+}
+
+
+.Accordion.Body{
+  background-color: red;
+  color: black;
+}
+
+.subchapter{
+  height: 200px;
+  width: 300px;
+  background-color: red;
+  color: black;
+}

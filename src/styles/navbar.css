@@ -1,6 +1,5 @@
-
 .navbar {
-  width: device-width;
+  width: 100%;
   height: 67px;
   background-color: #f8f8f8;
   border-bottom: 1px solid #b1aeae;
@@ -19,16 +18,8 @@
 }
 
 /* Icon container styling */
-
-.navbar-icons{
+.navbar-icons {
   display: flex;
   gap: 40px;
   align-items: center;
 }
-
-/* Frame 1312 styling */
-.moon {
-  width: 20.63px;
-  height: 21px; 
-}
-

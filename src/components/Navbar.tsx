@@ -1,6 +1,22 @@
+// src/components/Navbar.tsx
+import { useEffect, useState } from "react";
 import "../styles/navbar.css";
 
+type NavItem = {
+  alt: string;
+  src: string;
+};
+
 const Navbar = () => {
+  const [navItems, setNavItems] = useState<NavItem[]>([]);
+
+  useEffect(() => {
+    fetch("/src/data/navbarData.json")
+      .then((response) => response.json())
+      .then((data) => setNavItems(data))
+      .catch((error) => console.error("Error loading navbar data:", error));
+  }, []);
+
   return (
     <nav className="navbar">
       {/* Logo */}
@@ -12,49 +28,17 @@ const Navbar = () => {
         />
       </div>
 
-     <div className="navbar-icons">
-       {/* Frame Moon */}
-       <img
-        src="./src/assets/navBar/moon.png"
-        alt="Moon"
-        className="moon"
-      />
-      {/* Frame Home */}
-      <img
-        src="./src/assets/navBar/home.png"
-        alt="Home"
-        className="moon"
-      />
-      {/* Frame File */}
-      <img
-        src="./src/assets/navBar/vector.png"
-        alt="File"
-        className="moon"
-      />
-      {/* Frame Bar */}
-      <img
-        src="./src/assets/navBar/bar.png"
-        alt=""
-        className="moon"
-      />
-      {/* Frame person */}
-      <img
-        src="./src/assets/navBar/person.png"
-        alt="person"
-        className="moon"
-      />
-      {/* Frame Moon */}
-      <img
-        src="./src/assets/navBar/logout.svg"
-        alt="logout"
-        className="moon"
-      />
-      
-
-      
-     
-     </div>
-      
+      {/* Navbar Icons */}
+      <div className="navbar-icons">
+        {navItems.map((item, index) => (
+          <img
+            key={index}
+            src={item.src}
+            alt={item.alt}
+            className="navbar-icon"
+          />
+        ))}
+      </div>
     </nav>
   );
 };

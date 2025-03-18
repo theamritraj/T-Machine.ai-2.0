@@ -1,44 +1,89 @@
 import { useState } from "react";
-import "../styles/courseSection.css";
+import "../styles/chapterAccordian.css";
+import Modal from "../components/Modal";
+import Accordion from 'react-bootstrap/Accordion';
 
-const ChapterAccordion = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <div className="w-full p-4">
-      {/* Accordion Header */}
-      <div
-        className={`flex items-center justify-between p-3 rounded-md cursor-pointer shadow-md ${
-          isOpen ? "bg-purple-300" : "bg-gray-100"
-        }`}
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <div className="flex items-center gap-3">
-          <img
-            src="./src/assets/courseSection/book.png"
-            alt="book"
-            className="w-8 h-8"
-          />
-          <span className="text-lg font-semibold font-[Poppins] text-gray-700">
-            Chapter - 1
-          </span>
-        </div>
+interface CourseData {
+  chapters: { title: string }[];
+}
 
-        <i
-          className={`fas fa-chevron-${
-            isOpen ? "up" : "down"
-          } text-gray-600 transition-transform duration-200`}
-        ></i>
-      </div>
-
-      {/* Accordion Content */}
-      {isOpen && (
-        <div className="bg-purple-100 p-3 rounded-b-md shadow-md text-gray-700">
-          <p className="text-sm font-[Poppins]">Evaluate Mathematical Expressions in Python</p>
-        </div>
-      )}
-    </div>
-  );
+const courseData: CourseData = {
+  chapters: [
+    { title: "Introduction to Python" },
+  ],
 };
 
-export default ChapterAccordion;
+const ChapterAccordion = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+  return (
+    <>
+     <div className="flex items-center justify-between pt-2">
+        {/* Python Course Badge */}
+        <div className="relative flex items-center">
+          <div className="bg-gradient-to-r from-purple-500 to-purple-300 text-white font-semibold py-1 px-3 pr-6 shadow-md relative-md">
+            Python Course
+            <div className="absolute right-0 top-0 h-full w-4 bg-purple-300 clip-path-triangle"></div>
+          </div>
+        </div>
+
+        {/* Start Learning Button */}
+        <button
+          onClick={openModal}
+          className="bg-gradient-to-r from-purple-300 to-purple-500 text-white font-semibold py-1 px-4 rounded-full shadow-md hover:opacity-90 transition"
+        >
+          Start learning
+        </button>
+      </div>
+
+
+     
+      <div className="course-section">
+      <div>
+      <span id="cptn">Chapter No</span>
+      <Accordion>
+         <Accordion.Item eventKey="0">
+           <Accordion.Header>Accordion Item </Accordion.Header>
+           <Accordion.Body>
+              <div className="subchapter">
+                <div>Chapter - 1</div>
+                <div>Chapter - 2</div>
+                <div>Chapter - 3</div>
+                <div>Chapter - 4</div>
+                <div>Chapter - 5</div>
+                
+              </div>
+           </Accordion.Body>
+         </Accordion.Item>
+      </Accordion>
+      </div>
+
+        {/* Dynamic Chapter Content */}
+        <div className="chapter-no">
+          <span id="cptn">Chapter</span>
+          {courseData.chapters.map((chapter, index) => (
+            <div key={index} className="chapter-content">
+              {chapter.title}
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+
+
+      
+
+    
+
+
+    {/* Modal Component */}
+    <Modal isOpen={isModalOpen} onClose={closeModal} />
+    </>
+  )
+}
+
+export default ChapterAccordion

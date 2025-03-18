@@ -1,0 +1,8 @@
+[
+  { "alt": "Moon", "src": "./src/assets/navBar/moon.png" },
+  { "alt": "Home", "src": "./src/assets/navBar/home.svg" },
+  { "alt": "File", "src": "./src/assets/navBar/vector.png" },
+  { "alt": "Bar", "src": "./src/assets/navBar/bar.svg" },
+  { "alt": "Person", "src": "./src/assets/navBar/person.png" },
+  { "alt": "Logout", "src": "./src/assets/navBar/logout.svg" }
+]

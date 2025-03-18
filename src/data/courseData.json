@@ -1,0 +1,36 @@
+[
+  {
+    "course": "Python Course",
+    "chapters": [
+      {
+        "title": "Evaluate Mathematical Expressions in Python",
+        "image": "./src/assets/courseSection/book.png",
+        "topics": [
+         
+        ]
+      },
+      {
+        "title": "Find the GCD and LCM of Two Numbers",
+        "image": "./src/assets/courseSection/book.png",
+        "topics": []
+      },
+      {
+        "title": "Convert Decimal to Binary and Hexadecimal",
+        "image": "./src/assets/courseSection/book.png",
+        "topics": []
+      },
+      {
+        "title": "Swap Two Variables Without Temp Variable",
+        "image": "./src/assets/courseSection/book.png",
+        "topics": []
+      },
+      {
+        "title": "Swap Two Variables Without Temp Variable",
+        "image": "./src/assets/courseSection/book.png",
+        "topics": []
+      }
+    ]
+  }
+]
+
+
