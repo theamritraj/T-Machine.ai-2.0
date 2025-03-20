@@ -1,0 +1,85 @@
+.chapter-page {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+/* Chapter Header Styling */
+.chapter-page h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4a3f8f;
+  margin-bottom: 10px;
+}
+
+/* Topic Row Styling */
+.topic-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fef9c3;
+  padding: 10px 20px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.topic-row:hover {
+  transform: translateY(-2px);
+}
+
+/* Mini Task & Challenging Task Rows */
+.topic-row.mini-task,
+.topic-row.challenging-task {
+  background-color: #fde2e4;
+  color: #d6336c;
+  font-weight: bold;
+}
+
+/* Topic Number Styling */
+.topic-row .topic-number {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Topic Title Styling */
+.topic-row .topic-title {
+  flex: 1;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Chevron Styling */
+.topic-row .chevron {
+  font-size: 1.2rem;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+/* Chevron Rotate on Open */
+.topic-row.open .chevron {
+  transform: rotate(180deg);
+}
+
+/* Info Tooltip Icon */
+.topic-row .info-icon {
+  font-size: 1rem;
+  color: #fbbf24;
+}
+
+/* Divider line between tasks */
+.task-divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0;
+}

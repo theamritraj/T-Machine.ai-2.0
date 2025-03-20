@@ -1,6 +1,3 @@
-import React from "react";
-import "../styles/topicSection.css";
-
 interface Topic {
   type: string;
   title: string;
@@ -12,30 +9,23 @@ interface TopicSectionProps {
   topics: Topic[];
 }
 
-const TopicSection: React.FC<TopicSectionProps> = ({ topics }) => {
+const TopicSection = ({ topics }: TopicSectionProps) => {
   return (
-    <div className="topic-section">
-      <span id="cptn">Topic No</span>
+    <div className="mt-2 border border-yellow-300 bg-yellow-100 p-2 rounded-md">
+      <div className="grid grid-cols-2 font-bold text-yellow-700 mb-2">
+        <span>Topic No</span>
+        <span>Topic</span>
+      </div>
       {topics.map((topic, index) => (
         <div
           key={index}
-          className={`topic-item ${
-            topic.isMiniTask ? "mini-task" : topic.isChallengingTask ? "challenging-task" : ""
-          }`}
+          className={`flex items-center justify-between p-2 mb-1 rounded-md shadow-sm cursor-pointer
+            ${topic.isMiniTask ? "bg-pink-200 text-pink-700 font-medium" : ""}
+            ${topic.isChallengingTask ? "bg-red-200 text-red-700 font-medium" : "bg-yellow-200 text-yellow-700"}
+          `}
         >
-          <span>{topic.type} - {index + 1}</span>
+          <span className="font-medium">{topic.type}</span>
           <span>{topic.title}</span>
-          {topic.isMiniTask && (
-            <span className="task-note">
-              There will be a mini task after the topic. Complete it to proceed to the next topic.
-            </span>
-          )}
-          {topic.isChallengingTask && (
-            <span className="task-note">
-              There will be a final challenging task after this topic. Complete it to proceed to the next chapter.
-            </span>
-          )}
-          <i className="fa-solid fa-info-circle"></i>
         </div>
       ))}
     </div>

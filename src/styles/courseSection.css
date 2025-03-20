@@ -6,7 +6,9 @@
   padding: 15px;
   background: #B3C8FF;
   height: 80vh;
- 
+  border: 1px solid #3eadcc;
+  width: 92vw;
+ margin-left: 20px;
 }
 .chapter{
   display: flex;
